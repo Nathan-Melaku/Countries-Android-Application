@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data>
+    <variable
+        name="country"
+        type="com.example.countries.data.model.detabaseModel.CountryDb" />
+</data>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginVertical="@dimen/card_margin"
+        android:layout_marginHorizontal="@dimen/card_margin"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardMaxElevation="@dimen/card_elevation"
+        android:foreground="@drawable/ripple"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_margin="@dimen/card_margin"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{country.name.commonName}" />
+    </androidx.cardview.widget.CardView>
+</layout>
